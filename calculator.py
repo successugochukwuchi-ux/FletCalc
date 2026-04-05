@@ -183,55 +183,51 @@ def main(page: ft.Page):
     # Button style
     btn_style = ft.ButtonStyle(
         shape=ft.RoundedRectangleBorder(radius=15),
-        padding=ft.padding.all(15),
+        padding=ft.Padding.all(15),
     )
     
     num_btn_style = ft.ButtonStyle(
         shape=ft.RoundedRectangleBorder(radius=15),
-        padding=ft.padding.all(15),
+        padding=ft.Padding.all(15),
         bgcolor="#2d2d44",
         color="#ffffff",
     )
     
     op_btn_style = ft.ButtonStyle(
         shape=ft.RoundedRectangleBorder(radius=15),
-        padding=ft.padding.all(15),
+        padding=ft.Padding.all(15),
         bgcolor="#4a90d9",
         color="#ffffff",
     )
     
     sci_btn_style = ft.ButtonStyle(
         shape=ft.RoundedRectangleBorder(radius=15),
-        padding=ft.padding.all(15),
+        padding=ft.Padding.all(15),
         bgcolor="#3d3d5c",
         color="#ffffff",
     )
     
     func_btn_style = ft.ButtonStyle(
         shape=ft.RoundedRectangleBorder(radius=15),
-        padding=ft.padding.all(15),
+        padding=ft.Padding.all(15),
         bgcolor="#5c5c7a",
         color="#ffffff",
     )
     
     def create_btn(text_label, data, style=None):
         return ft.Button(
-            text_label,
+            ft.Text(text_label, size=18),
             data=data,
             on_click=btn_click,
             style=style or num_btn_style,
-            min_width=70,
-            min_height=55,
         )
     
     # Degree/Radian toggle button
     deg_rad_btn = ft.Button(
-        "DEG",
+        ft.Text("DEG", size=16),
         data="DEG",
         on_click=btn_click,
         style=func_btn_style,
-        min_width=60,
-        min_height=45,
     )
     
     # Scientific functions row 1
@@ -342,7 +338,7 @@ def main(page: ft.Page):
             ],
             horizontal_alignment=ft.CrossAxisAlignment.END,
         ),
-        padding=ft.padding.all(20),
+        padding=ft.Padding.all(20),
         bgcolor="#16213e",
         border_radius=15,
         margin=ft.margin.only(bottom=10),
