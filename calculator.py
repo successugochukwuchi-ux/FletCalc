@@ -163,9 +163,9 @@ def main(page: ft.Page):
         elif data == "DEG":
             is_degree = not is_degree
             if is_degree:
-                deg_rad_btn.text = "DEG"
+                deg_rad_btn.content = "DEG"
             else:
-                deg_rad_btn.text = "RAD"
+                deg_rad_btn.content = "RAD"
             deg_rad_btn.bgcolor = "#4a90d9"
             page.update()
         else:
@@ -214,9 +214,9 @@ def main(page: ft.Page):
         color="#ffffff",
     )
     
-    def create_btn(text, data, style=None):
-        return ft.ElevatedButton(
-            text=text,
+    def create_btn(text_label, data, style=None):
+        return ft.Button(
+            text_label,
             data=data,
             on_click=btn_click,
             style=style or num_btn_style,
@@ -225,8 +225,8 @@ def main(page: ft.Page):
         )
     
     # Degree/Radian toggle button
-    deg_rad_btn = ft.ElevatedButton(
-        text="DEG",
+    deg_rad_btn = ft.Button(
+        "DEG",
         data="DEG",
         on_click=btn_click,
         style=func_btn_style,
@@ -364,4 +364,4 @@ def main(page: ft.Page):
     )
 
 if __name__ == "__main__":
-    ft.run(target=main, view=ft.AppView.WEB_BROWSER)
+    ft.run(main, view=ft.AppView.WEB_BROWSER)
