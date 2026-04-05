@@ -663,7 +663,7 @@ def main(page: ft.Page):
             padding=ft.Padding.all(20),
             bgcolor="#16213e",
             border_radius=15,
-            margin=ft.margin.only(bottom=10),
+            margin=ft.Margin.only(bottom=10),
         )
         
         clear_row = ft.Row(
@@ -742,7 +742,7 @@ def main(page: ft.Page):
             padding=ft.Padding.all(20),
             bgcolor="#16213e",
             border_radius=15,
-            margin=ft.margin.only(bottom=10),
+            margin=ft.Margin.only(bottom=10),
         )
         
         deg_rad_btn = ft.Button(
@@ -877,10 +877,10 @@ def main(page: ft.Page):
                     alignment=ft.MainAxisAlignment.CENTER,
                 ),
                 ft.Row(
-                    controls=[currency_from, ft.Icon(ft.icons.ARROW_DOWNWARD, color="#4a90d9"), currency_to],
+                    controls=[currency_from, ft.Icon("arrow_downward", color="#4a90d9"), currency_to],
                     alignment=ft.MainAxisAlignment.CENTER,
                 ),
-                ft.ElevatedButton("Convert", on_click=convert_currency, style=op_btn_style),
+                ft.Button("Convert", on_click=convert_currency, style=op_btn_style),
                 ft.Divider(height=20, color="transparent"),
                 currency_result,
             ],
@@ -915,7 +915,7 @@ def main(page: ft.Page):
                     controls=[ft.Text("From:", color="#ffffff"), time_unit_from, ft.Text("To:", color="#ffffff"), time_unit_to],
                     alignment=ft.MainAxisAlignment.CENTER,
                 ),
-                ft.ElevatedButton("Calculate", on_click=calculate_time, style=op_btn_style),
+                ft.Button("Calculate", on_click=calculate_time, style=op_btn_style),
                 ft.Divider(height=20, color="transparent"),
                 time_result,
             ],
@@ -936,7 +936,7 @@ def main(page: ft.Page):
                 ft.Row(controls=[vector_b_x, vector_b_y, vector_b_z], alignment=ft.MainAxisAlignment.CENTER),
                 ft.Divider(height=15, color="transparent"),
                 vector_operation,
-                ft.ElevatedButton("Calculate", on_click=calculate_vector, style=op_btn_style),
+                ft.Button("Calculate", on_click=calculate_vector, style=op_btn_style),
                 ft.Divider(height=20, color="transparent"),
                 vector_result,
             ],
@@ -956,8 +956,8 @@ def main(page: ft.Page):
                     controls=[ft.Text("Value:", color="#ffffff"), unit_value],
                     alignment=ft.MainAxisAlignment.CENTER,
                 ),
-                ft.Row(controls=[unit_from, ft.Icon(ft.icons.ARROW_DOWNWARD, color="#4a90d9"), unit_to], alignment=ft.MainAxisAlignment.CENTER),
-                ft.ElevatedButton("Convert", on_click=convert_units, style=op_btn_style),
+                ft.Row(controls=[unit_from, ft.Icon("arrow_downward", color="#4a90d9"), unit_to], alignment=ft.MainAxisAlignment.CENTER),
+                ft.Button("Convert", on_click=convert_units, style=op_btn_style),
                 ft.Divider(height=20, color="transparent"),
                 unit_result,
             ],
@@ -1006,7 +1006,7 @@ def main(page: ft.Page):
         ft.Container(
             content=ft.Row(
                 controls=[
-                    ft.Icon(ft.icons.CALCULATE, color="#ffffff"),
+                    ft.Icon("calculate", color="#ffffff"),
                     ft.Text("Standard", size=16, color="#ffffff"),
                 ],
                 spacing=10,
@@ -1021,7 +1021,7 @@ def main(page: ft.Page):
         ft.Container(
             content=ft.Row(
                 controls=[
-                    ft.Icon(ft.icons.SCIENCE, color="#ffffff"),
+                    ft.Icon("science", color="#ffffff"),
                     ft.Text("Scientific", size=16, color="#ffffff"),
                 ],
                 spacing=10,
@@ -1036,7 +1036,7 @@ def main(page: ft.Page):
         ft.Container(
             content=ft.Row(
                 controls=[
-                    ft.Icon(ft.icons.CURRENCY_EXCHANGE, color="#ffffff"),
+                    ft.Icon("currency_exchange", color="#ffffff"),
                     ft.Text("Currency", size=16, color="#ffffff"),
                 ],
                 spacing=10,
@@ -1051,7 +1051,7 @@ def main(page: ft.Page):
         ft.Container(
             content=ft.Row(
                 controls=[
-                    ft.Icon(ft.icons.SCHEDULE, color="#ffffff"),
+                    ft.Icon("schedule", color="#ffffff"),
                     ft.Text("Time", size=16, color="#ffffff"),
                 ],
                 spacing=10,
@@ -1066,7 +1066,7 @@ def main(page: ft.Page):
         ft.Container(
             content=ft.Row(
                 controls=[
-                    ft.Icon(ft.icons.ALT_ROUTE, color="#ffffff"),
+                    ft.Icon("alt_route", color="#ffffff"),
                     ft.Text("Vector", size=16, color="#ffffff"),
                 ],
                 spacing=10,
@@ -1081,7 +1081,7 @@ def main(page: ft.Page):
         ft.Container(
             content=ft.Row(
                 controls=[
-                    ft.Icon(ft.icons.SWAP_HORIZ, color="#ffffff"),
+                    ft.Icon("swap_horiz", color="#ffffff"),
                     ft.Text("Units", size=16, color="#ffffff"),
                 ],
                 spacing=10,
